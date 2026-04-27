@@ -1,0 +1,47 @@
+{
+  "report_type": "execution_summary",
+  "report_id": "exec_20260419_094622",
+  "generated_at": "2026-04-19T09:46:22.080767+00:00",
+  "task": "write python code to print hello World",
+  "workflow": "default",
+  "success": false,
+  "iterations": 3,
+  "duration_seconds": 3.714,
+  "available_agents": [
+    "claude"
+  ],
+  "total_suggestions": 0,
+  "fallback_count": 0,
+  "steps": [
+    {
+      "agent": "claude",
+      "task_type": "refine",
+      "success": false,
+      "has_output": true,
+      "error": "",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "claude",
+      "task_type": "refine",
+      "success": false,
+      "has_output": true,
+      "error": "",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "claude",
+      "task_type": "refine",
+      "success": false,
+      "has_output": true,
+      "error": "",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    }
+  ]
+}

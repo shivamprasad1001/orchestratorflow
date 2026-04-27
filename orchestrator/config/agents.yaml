@@ -1,0 +1,148 @@
+# AI Agent Configuration
+# Configure which AI coding assistants to use and how they should collaborate.
+
+agents:
+  # Free & Fast AIs (Primary)
+  groq:
+    type: groq
+    enabled: true
+    model: "llama-3.3-70b-versatile"
+    api_key: "" # Set via GROQ_API_KEY env var
+    role: "implementation"
+    timeout: 3600
+    description: "Ultra-fast implementation agent via Groq Cloud"
+
+  gemini:
+    type: gemini-api
+    enabled: true
+    model: "gemini-2.0-flash"
+    api_key: "" # Set via GEMINI_API_KEY env var
+    role: "review"
+    timeout: 3600
+    description: "Reviews code for SOLID principles and best practices using Gemini Flash"
+
+  # Paid agents (Fallback/Optional)
+  claude:
+    type: cli
+    enabled: false
+    command: "claude"
+    role: "refinement"
+    timeout: 3600
+    description: "Implements feedback and refines code quality"
+
+  codex:
+    type: cli
+    enabled: false
+    command: "codex"
+    role: "implementation"
+    timeout: 3600
+    description: "Primary implementation agent for writing initial code"
+
+  # Local/offline agents
+  local-code:
+    type: ollama
+    enabled: false
+    model: "codellama:13b"
+    endpoint: "http://localhost:11434"
+    offline: true
+    timeout: 3600
+    capabilities: [code, review]
+    description: "Local coding model via Ollama"
+
+  local-instruct:
+    type: ollama
+    enabled: false
+    model: "mistral:7b-instruct"
+    endpoint: "http://localhost:11434"
+    offline: true
+    timeout: 3600
+    capabilities: [general, docs]
+    description: "Local instruction/reasoning model via Ollama"
+
+# Workflow Definitions
+workflows:
+  default:
+    - agent: "groq"
+      task: "implement"
+      description: "Create initial implementation using Groq"
+    - agent: "gemini"
+      task: "review"
+      description: "Review for SOLID principles using Gemini"
+    - agent: "groq"
+      task: "refine"
+      description: "Implement feedback and improvements"
+
+  quick:
+    - agent: "groq"
+      task: "implement"
+      description: "Quick implementation using Groq"
+
+  thorough:
+    - agent: "groq"
+      task: "implement"
+      description: "Create initial implementation"
+    - agent: "gemini"
+      task: "review"
+      description: "Comprehensive code review"
+    - agent: "gemini"
+      task: "review"
+      description: "Architecture analysis"
+    - agent: "groq"
+      task: "refine"
+      description: "Implement all feedback"
+
+  review-only:
+    - agent: "gemini"
+      task: "review"
+      description: "Review existing code"
+    - agent: "groq"
+      task: "refine"
+      description: "Implement improvements"
+
+settings:
+  max_iterations: 3
+  output_dir: "./output"
+  workspace_dir: "./workspace"
+  log_level: "INFO"
+  log_file: "orchestratorflow.log"
+  create_reports: true
+  reports_dir: "./reports"
+  min_suggestions_threshold: 3
+  colored_output: true
+  project_path: ""
+
+  offline:
+    enabled: false
+    auto_detect: true
+
+  fallback:
+    enabled: true
+    map:
+      groq: local-code
+      gemini: local-instruct
+      claude: local-instruct
+
+agentic_team:
+  lead_role: "project_manager"
+  max_turns: 12
+  roles:
+    project_manager:
+      title: "Project Manager (Team Lead)"
+      agent: "groq"
+      responsibilities: "Initiate work, route subtasks dynamically, and decide final readiness."
+    software_architect:
+      title: "Software Architect"
+      agent: "gemini"
+      responsibilities: "Define architecture, interfaces, and technical constraints."
+    software_developer:
+      title: "Software Developer"
+      agent: "groq"
+      responsibilities: "Implement required code changes."
+    qa_engineer:
+      title: "QA Engineer"
+      agent: "gemini"
+      responsibilities: "Validate quality, edge cases, and regressions."
+    devops_engineer:
+      title: "DevOps Engineer"
+      agent: "groq"
+      responsibilities: "Handle deployment/runtime concerns and operational readiness."

@@ -1,0 +1,108 @@
+{
+  "report_type": "execution_summary",
+  "report_id": "exec_20260420_042029",
+  "generated_at": "2026-04-20T04:20:29.105185+00:00",
+  "task": "write a python code to print hello world",
+  "workflow": "default",
+  "success": false,
+  "iterations": 3,
+  "duration_seconds": 6.088,
+  "available_agents": [
+    "groq",
+    "gemini"
+  ],
+  "total_suggestions": 0,
+  "fallback_count": 0,
+  "steps": [
+    {
+      "agent": "groq",
+      "task_type": "implement",
+      "success": true,
+      "has_output": true,
+      "error": null,
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "gemini",
+      "task_type": "review",
+      "success": false,
+      "has_output": false,
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "groq",
+      "task_type": "refine",
+      "success": true,
+      "has_output": true,
+      "error": null,
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "groq",
+      "task_type": "implement",
+      "success": true,
+      "has_output": true,
+      "error": null,
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "gemini",
+      "task_type": "review",
+      "success": false,
+      "has_output": false,
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "groq",
+      "task_type": "refine",
+      "success": false,
+      "has_output": false,
+      "error": "Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "groq",
+      "task_type": "implement",
+      "success": false,
+      "has_output": false,
+      "error": "Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "gemini",
+      "task_type": "review",
+      "success": false,
+      "has_output": false,
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    },
+    {
+      "agent": "groq",
+      "task_type": "refine",
+      "success": true,
+      "has_output": true,
+      "error": null,
+      "files_modified": [],
+      "suggestion_count": 0,
+      "fallback_from": null
+    }
+  ]
+}
