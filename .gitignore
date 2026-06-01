@@ -1,0 +1,59 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.eggs/
+
+# --- Environments & Virtualenvs ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+web/.env
+web/.env.local
+venv/
+.venv/
+env/
+ENV/
+dist/
+build/
+
+# --- Node / React / Next.js (web folder) ---
+web/node_modules/
+web/.next/
+web/out/
+web/build/
+web/dist/
+web/.eslintcache
+web/pnpm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/.pnpm-store/
+node_modules/
+.next/
+out/
+
+# --- Logs & App Outputs ---
+*.log
+logs/*
+!logs/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
