@@ -1,0 +1,33 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">OrchestratorFlow banner</title>
+  <desc id="desc">A colorful workflow diagram showing specialized AI agents moving from planning to testing.</desc>
+  <rect width="1200" height="360" rx="28" fill="#101828"/>
+  <path d="M0 260C172 216 272 284 442 236C608 189 685 73 864 93C1002 108 1082 194 1200 155V360H0V260Z" fill="#12B76A" opacity="0.2"/>
+  <path d="M0 105C142 36 280 82 405 127C566 186 663 214 818 148C984 78 1084 42 1200 75V0H0V105Z" fill="#7C3AED" opacity="0.24"/>
+  <circle cx="1000" cy="98" r="118" fill="#F97316" opacity="0.16"/>
+  <circle cx="214" cy="265" r="92" fill="#06B6D4" opacity="0.18"/>
+  <g filter="url(#shadow)">
+    <rect x="84" y="74" width="198" height="84" rx="18" fill="#FFFFFF"/>
+    <rect x="327" y="202" width="198" height="84" rx="18" fill="#FFFFFF"/>
+    <rect x="570" y="74" width="198" height="84" rx="18" fill="#FFFFFF"/>
+    <rect x="813" y="202" width="198" height="84" rx="18" fill="#FFFFFF"/>
+  </g>
+  <path d="M282 116C331 116 299 244 327 244" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M525 244C574 244 542 116 570 116" stroke="#A78BFA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M768 116C817 116 785 244 813 244" stroke="#34D399" stroke-width="8" stroke-linecap="round"/>
+  <text x="126" y="112" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Plan</text>
+  <text x="126" y="139" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="17">task intent</text>
+  <text x="369" y="240" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Design</text>
+  <text x="369" y="267" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="17">architecture</text>
+  <text x="612" y="112" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Code</text>
+  <text x="612" y="139" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="17">workspace</text>
+  <text x="855" y="240" fill="#101828" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Review</text>
+  <text x="855" y="267" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="17">test and fix</text>
+  <text x="82" y="330" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">OrchestratorFlow</text>
+  <text x="665" y="330" fill="#D0D5DD" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500">multi-agent software workflow automation</text>
+  <defs>
+    <filter id="shadow" x="64" y="54" width="967" height="252" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+</svg>

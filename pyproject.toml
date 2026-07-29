@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orchestratorflow"
+version = "0.1.0"
+description = "A LangGraph-powered multi-agent workflow for planning, coding, reviewing, and testing generated software projects."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "OrchestratorFlow Maintainers" }
+]
+dependencies = [
+  "langgraph>=0.2.0",
+  "langchain-core>=0.3.0",
+  "langchain-google-genai>=2.0.0",
+  "langchain-openai>=0.2.0",
+  "pydantic>=2.0.0",
+  "python-dotenv>=1.0.0",
+  "rich>=13.7.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[project.scripts]
+orchestratorflow = "orchestratorflow.ui.cli.__main__:main"
+
+[tool.setuptools]
+package-dir = { "orchestratorflow" = "." }
+packages = [
+  "orchestratorflow",
+  "orchestratorflow.agents",
+  "orchestratorflow.graph",
+  "orchestratorflow.tools",
+  "orchestratorflow.ui",
+  "orchestratorflow.ui.cli"
+]
+
+[tool.setuptools.package-data]
+orchestratorflow = ["prompts/*.md"]

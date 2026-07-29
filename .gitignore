@@ -1,19 +1,60 @@
-# Environment Variables
+# Environment and secrets
 .env
 *.env
+!.env.example
+!.env.sample
 
-# Python Bytecode & Cache
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
 
-# LangGraph & IDE
-.langgraph_api/
-.vscode/
-.idea/
-
-# Virtual Environments
+# Virtual environments
 venv/
 .venv/
 env/
+ENV/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Generated OrchestratorFlow runs
+workspace/
+
+# LangGraph Studio/runtime state
+.langgraph_api/
+studio/.langgraph_api/
+
+# Logs and local runtime files
+*.log
+logs/
+*.sqlite
+*.sqlite3
+*.db
+*.pckl
+*.pickle
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local notebooks and scratch files
+.ipynb_checkpoints/
+tmp/
+temp/
