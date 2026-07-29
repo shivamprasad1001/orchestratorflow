@@ -120,6 +120,9 @@ python ui/cli "Build a CSV cleaner script"
 ```
 
 ## LangGraph Studio
+<p align="center">
+  <img src="README_assets/image.png" alt="OrchestratorFlow agents workflow " width="100%">
+</p>
 
 The Studio graph entrypoint is in `studio/Agent.py`, with configuration in `studio/langgraph.json`.
 
