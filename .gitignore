@@ -1,0 +1,19 @@
+# Environment Variables
+.env
+*.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# LangGraph & IDE
+.langgraph_api/
+.vscode/
+.idea/
+
+# Virtual Environments
+venv/
+.venv/
+env/
