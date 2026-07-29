@@ -4,7 +4,7 @@ Dynamic CLI entry point for the terminal UI.
 Examples:
     python ui/cli
     python ui/cli --debug
-    python -m orchestratorflow.ui.cli "Build a FastAPI Todo API"
+    orchestratorflow "Build a FastAPI Todo API"
 """
 
 import argparse
@@ -170,9 +170,9 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python -m orchestratorflow.ui.cli "Build a FastAPI Todo API"
-  python -m orchestratorflow.ui.cli --debug --verbose "Analyze codebase"
-  python -m orchestratorflow.ui.cli  # Interactive mode
+  orchestratorflow "Build a FastAPI Todo API"
+  orchestratorflow --debug --verbose "Analyze codebase"
+  orchestratorflow  # Interactive mode
         """
     )
     parser.add_argument(
