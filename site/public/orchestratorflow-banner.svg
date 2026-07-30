@@ -1,0 +1,153 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">OrchestratorFlow Banner - LangGraph Studio Architecture</title>
+  <desc id="desc">LangGraph Studio architecture graph featuring a central Supervisor node dynamically coordinating specialized agents.</desc>
+  
+  <!-- Canvas Dark Background -->
+  <rect width="1200" height="480" rx="24" fill="#08090E"/>
+  <rect width="1200" height="480" rx="24" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+    <filter id="supervisorGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+    </marker>
+    <marker id="arrowIndigo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6366f1" />
+    </marker>
+    <marker id="arrowYellow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#eab308" />
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a855f7" />
+    </marker>
+  </defs>
+  
+  <rect width="1200" height="480" rx="24" fill="url(#grid)"/>
+
+  <!-- Header Text -->
+  <text x="60" y="52" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.02em">OrchestratorFlow</text>
+  <text x="310" y="52" fill="#8A8F98" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, monospace" font-size="14" font-weight="500">v1.0.0 • LangGraph Studio Dynamic Architecture</text>
+  <line x1="60" y1="72" x2="1140" y2="72" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Outbound Dashed Green Paths (supervisor -> nodes) -->
+  <g opacity="0.75">
+    <!-- __start__ to supervisor -->
+    <path d="M 600 112 L 600 138" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+
+    <!-- supervisor to coder -->
+    <path d="M 520 160 Q 320 120 220 220" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to designer -->
+    <path d="M 530 180 Q 340 280 280 395" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to human -->
+    <path d="M 570 185 Q 490 290 470 395" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to planner -->
+    <path d="M 630 185 Q 710 290 730 395" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to reviewer -->
+    <path d="M 670 180 Q 820 200 900 255" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to tester -->
+    <path d="M 680 160 Q 920 160 1040 310" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+
+    <!-- supervisor to __end__ -->
+    <path d="M 515 150 Q 320 90 240 105" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- Inbound Return Paths (nodes -> supervisor) -->
+  <g opacity="0.9">
+    <!-- coder to supervisor -->
+    <path d="M 220 260 Q 360 280 515 175" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+    <!-- designer to supervisor -->
+    <path d="M 295 395 Q 400 290 545 180" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- human to supervisor -->
+    <path d="M 485 395 Q 540 290 580 185" fill="none" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowIndigo)"/>
+
+    <!-- planner to supervisor -->
+    <path d="M 715 395 Q 660 290 620 185" fill="none" stroke="#eab308" stroke-width="2" marker-end="url(#arrowYellow)"/>
+
+    <!-- reviewer to supervisor -->
+    <path d="M 870 295 Q 760 300 655 175" fill="none" stroke="#ec4899" stroke-width="2" marker-end="url(#arrowPink)"/>
+
+    <!-- tester to supervisor -->
+    <path d="M 990 350 Q 820 370 660 170" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  </g>
+
+  <!-- Nodes Rendering -->
+  <!-- __start__ -->
+  <g transform="translate(540, 95)">
+    <rect width="120" height="36" rx="14" fill="#161922" stroke="#4b5563" stroke-width="1.5"/>
+    <text x="60" y="22" text-anchor="middle" fill="#d1d5db" font-family="ui-monospace, monospace" font-size="12" font-weight="600">__start__</text>
+  </g>
+
+  <!-- supervisor (Glowing centerpiece) -->
+  <g transform="translate(515, 138)">
+    <rect x="-4" y="-4" width="178" height="56" rx="18" fill="#10b981" opacity="0.3" filter="url(#supervisorGlow)"/>
+    <rect width="170" height="48" rx="16" fill="#064e3b" stroke="#10b981" stroke-width="2.5"/>
+    <text x="85" y="29" text-anchor="middle" fill="#34d399" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">supervisor</text>
+  </g>
+
+  <!-- __end__ -->
+  <g transform="translate(170, 95)">
+    <rect width="120" height="36" rx="14" fill="#161922" stroke="#4b5563" stroke-width="1.5"/>
+    <text x="60" y="22" text-anchor="middle" fill="#d1d5db" font-family="ui-monospace, monospace" font-size="12" font-weight="600">__end__</text>
+  </g>
+
+  <!-- coder -->
+  <g transform="translate(150, 235)">
+    <rect width="130" height="42" rx="14" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="65" y="26" text-anchor="middle" fill="#34d399" font-family="ui-monospace, monospace" font-size="13" font-weight="600">coder</text>
+  </g>
+
+  <!-- designer -->
+  <g transform="translate(220, 395)">
+    <rect width="140" height="42" rx="14" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="70" y="26" text-anchor="middle" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="13" font-weight="600">designer</text>
+  </g>
+
+  <!-- human -->
+  <g transform="translate(420, 395)">
+    <rect width="130" height="42" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+    <text x="65" y="26" text-anchor="middle" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="600">human</text>
+  </g>
+
+  <!-- planner -->
+  <g transform="translate(650, 395)">
+    <rect width="140" height="42" rx="14" fill="#422006" stroke="#eab308" stroke-width="1.5"/>
+    <text x="70" y="26" text-anchor="middle" fill="#fde047" font-family="ui-monospace, monospace" font-size="13" font-weight="600">planner</text>
+  </g>
+
+  <!-- reviewer -->
+  <g transform="translate(840, 260)">
+    <rect width="140" height="42" rx="14" fill="#4c0519" stroke="#ec4899" stroke-width="1.5"/>
+    <text x="70" y="26" text-anchor="middle" fill="#f472b6" font-family="ui-monospace, monospace" font-size="13" font-weight="600">reviewer</text>
+  </g>
+
+  <!-- tester -->
+  <g transform="translate(980, 320)">
+    <rect width="130" height="42" rx="14" fill="#3b0764" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="65" y="26" text-anchor="middle" fill="#c084fc" font-family="ui-monospace, monospace" font-size="13" font-weight="600">tester</text>
+  </g>
+
+  <!-- Footer Legend -->
+  <line x1="60" y1="452" x2="1140" y2="452" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="60" y="470" fill="#8A8F98" font-family="ui-monospace, monospace" font-size="11">Dashed Lines = Outbound Supervisor Route | Solid Lines = Agent Control Return to Supervisor</text>
+  <text x="1000" y="470" fill="#34D399" font-family="ui-monospace, monospace" font-size="11" font-weight="bold">LangGraph Verified</text>
+</svg>

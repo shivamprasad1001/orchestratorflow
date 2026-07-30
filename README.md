@@ -33,6 +33,7 @@ orchestratorflow/
 ├── prompts/            # System prompts used by each agent
 ├── tools/              # Code execution helpers
 ├── ui/cli/             # Rich terminal UI
+├── site/               # React/Vite GitHub Pages site
 ├── studio/             # LangGraph Studio entrypoint
 ├── README_assets/      # Images used by this README
 ├── paper.pdf           # Project paper/reference document
@@ -118,6 +119,32 @@ During local development, this equivalent path also works from the repository ro
 ```bash
 python ui/cli "Build a CSV cleaner script"
 ```
+
+## GitHub Pages UI
+
+The repository includes a production-ready React/Vite site in `site/`.
+
+Run it locally:
+
+```bash
+cd site
+npm install
+npm run dev
+```
+
+Build it for GitHub Pages:
+
+```bash
+npm run build
+```
+
+The Vite base path is configured for this repository:
+
+```text
+/orchestratorflow/
+```
+
+Pushing to `main` triggers `.github/workflows/pages.yml`, which builds `site/` and deploys `site/dist` to GitHub Pages.
 
 ## LangGraph Studio
 <p align="center">
