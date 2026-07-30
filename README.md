@@ -24,6 +24,12 @@ The project is built for local development first: generated projects are written
 - Includes a Rich terminal UI for readable workflow progress.
 - Keeps generated runs outside Git through a production-focused `.gitignore`.
 
+> [!TIP]
+> 💬 **Have feedback or suggestions?**
+>
+> If you find a bug, have an idea for a new feature, or think something can be improved, please **open an Issue**.
+>
+> Your feedback helps make **OrchestratorFlow** better for everyone. 🚀
 ## Repository Layout
 
 ```text
